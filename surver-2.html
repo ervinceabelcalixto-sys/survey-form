@@ -1,0 +1,180 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+
+    <style>
+      body {
+        font-family: "Poppins", Arial, sans-serif;
+        background: linear-gradient(135deg, #ffd1dc, #ffb6c1, #ffcce7);
+        color: #4a4a4a;
+        max-width: 650px;
+        margin: 40px auto;
+        padding: 25px;
+        border-radius: 15px;
+        background-color: #fff0f5;
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+      }
+
+      h1 {
+        text-align: center;
+        color: #e75480;
+        margin-bottom: 10px;
+      }
+
+      #description {
+        text-align: center;
+        color: #7a4a58;
+        margin-bottom: 25px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label,
+      p {
+        margin: 10px 0 5px;
+        color: #944c67;
+        font-weight: 500;
+      }
+
+      input,
+      select,
+      textarea {
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #f5a6b8;
+        margin-bottom: 15px;
+        font-size: 1rem;
+        background-color: #fff9fb;
+        transition: 0.2s ease-in-out;
+      }
+
+      input:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #ff6fa0;
+        outline: none;
+        box-shadow: 0 0 5px rgba(255, 111, 160, 0.5);
+      }
+
+      input[type="radio"],
+      input[type="checkbox"] {
+        margin-right: 8px;
+        accent-color: #ff6fa0;
+      }
+
+      button {
+        background-color: #ff6fa0;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 12px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #ff4c91;
+        transform: scale(1.02);
+      }
+
+      textarea {
+        resize: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 id="title">💖 Customer Experience Survey 💖</h1>
+    <p id="description">
+      Thank you for taking a moment to share your thoughts! Your feedback helps us improve with love and care. 🌷
+    </p>
+
+    <form id="survey-form">
+      <!-- Name -->
+      <label id="name-label" for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your full name"
+        required
+      />
+
+      <!-- Email -->
+      <label id="email-label" for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email address"
+        required
+      />
+
+      <!-- Number -->
+      <label id="number-label" for="number">Age (optional):</label>
+      <input
+        type="number"
+        id="number"
+        name="age"
+        min="10"
+        max="100"
+        placeholder="Enter your age"
+      />
+
+      <!-- Dropdown -->
+      <label for="dropdown">How did you hear about us?</label>
+      <select id="dropdown" name="source" required>
+        <option value="">Select an option</option>
+        <option value="social-media">Social Media</option>
+        <option value="friend">Friend/Family</option>
+        <option value="advertisement">Advertisement</option>
+      </select>
+
+      <!-- Radio Buttons -->
+      <p>Would you recommend us to a friend?</p>
+      <label>
+        <input type="radio" name="recommend" value="yes" /> Yes 💕
+      </label>
+      <label>
+        <input type="radio" name="recommend" value="no" /> No 💔
+      </label>
+
+      <!-- Checkboxes -->
+      <p>What aspects did you like? (Select all that apply)</p>
+      <label>
+        <input type="checkbox" name="liked" value="service" /> Customer Service 🌸
+      </label>
+      <label>
+        <input type="checkbox" name="liked" value="quality" /> Product Quality 💎
+      </label>
+      <label>
+        <input type="checkbox" name="liked" value="price" /> Affordable Price 💰
+      </label>
+      <label>
+        <input type="checkbox" name="liked" value="speed" /> Delivery Speed 🚀
+      </label>
+
+      <!-- Textarea -->
+      <p>Additional Comments:</p>
+      <textarea
+        name="comments"
+        rows="4"
+        cols="40"
+        placeholder="Share your thoughts here..."
+      ></textarea>
+
+      <!-- Submit Button -->
+      <button id="submit" type="submit">Submit 💌</button>
+    </form>
+  </body>
+</html>
